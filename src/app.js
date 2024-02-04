@@ -26,7 +26,7 @@ app.use('/api/v1/names/:id',(req,res)=>{
     return res.status(200).json({
         status:'success',
         message:'Product name fetched successfully',
-        data:{userData}
+        data:{"name":userData}
     });
 })
 
