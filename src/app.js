@@ -23,7 +23,7 @@ app.use('/api/v1/names/:id',(req,res)=>{
             message: "Not found!" 
         })
     }
-    return res.status(200).json({
+    return res.status(200).send({
         status:'success',
         message:'Product name fetched successfully',
         data:{userData}
