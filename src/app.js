@@ -18,7 +18,7 @@ app.use('/api/v1/names/:id',(req,res)=>{
     // console.log(id);
     const userData = productNames.find(product => id == product.id)
     if(!userData){
-        return res.status(404).json({
+        return res.status(404).send({
             status: 'failed',
             message: "Not found!" 
         })
@@ -26,7 +26,7 @@ app.use('/api/v1/names/:id',(req,res)=>{
     return res.status(200).json({
         status:'success',
         message:'Product name fetched successfully',
-        data:{"name":userData}
+        data:{userData}
     });
 })
 
